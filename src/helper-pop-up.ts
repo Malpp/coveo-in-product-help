@@ -38,17 +38,23 @@ class HelperLayover {
         $(`#${this.layoverId}`).height($("html").height());
         this.hide();
         this.overlayElements = [];
-        this.overlayElements.push(new OverlayElement("#Title", this));
-        this.overlayElements.push(new OverlayElement("#Description", this));
-        this.overlayElements.push(new OverlayElement("#Link", this));
     }
 
-    public hide() {
+    hide() {
         $(`#${this.layoverId}`).hide();
     }
 
-    public show() {
+    show() {
         $(`#${this.layoverId}`).show();
+    }
+
+    addElement(selector: string){
+        if($(selector).length){
+            this.overlayElements.push(new OverlayElement(selector, this));
+        }
+        else{
+            console.error(`Cannot find element: ${selector}`)
+        }
     }
 }
 
@@ -61,6 +67,10 @@ class Helper {
         this.popupIsShowing = false;
         this.addPopupButton();
         this.layover = new HelperLayover;
+
+        this.layover.addElement("#Title");
+        this.layover.addElement("#Description");
+        this.layover.addElement("#Link");
     }
 
     private addPopupButton() {
