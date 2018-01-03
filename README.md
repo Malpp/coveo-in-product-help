@@ -1,27 +1,8 @@
-# Chrome Extension TypeScript Starter
-
-Chrome Extension, TypeScript and Visual Studio Code
+# Coveo in-product helper script
 
 ## Prerequisites
 
 * [node + npm](https://nodejs.org/) (Current Version)
-
-## Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Includes the following
-
-* TypeScript
-* Webpack
-* Moment.js
-* jQuery
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
 
 ## Project Structure
 
