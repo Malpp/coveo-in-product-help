@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        script: path.join(__dirname, 'src/helper-pop-up.ts'),
-        vendor: ['moment', 'jquery']
+        script: path.join(__dirname, 'src/main.ts'),
+        vendor: ['jquery']
     },
     output: {
         path: path.join(__dirname, 'bin'),
