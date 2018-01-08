@@ -1,15 +1,18 @@
 import * as $ from 'jquery';
 import { HelperLayover } from "./helper-layover";
+import { CoveoAPI } from "./coveo-pushapi";
 
 class Helper {
     buttonId: string;
     popupIsShowing: boolean;
     layover: HelperLayover;
+    api: CoveoAPI;
     constructor() {
         this.buttonId = "__helper-button";
         this.popupIsShowing = false;
         this.addPopupButton();
         this.layover = new HelperLayover;
+        this.api = new CoveoAPI;
 
         this.layover.addElement("#Title");
         this.layover.addElement("#Description");

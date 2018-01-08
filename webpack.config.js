@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        script: path.join(__dirname, 'src/main.ts'),
+        helpOverlay: path.join(__dirname, 'src/main.ts'),
         vendor: ['jquery']
     },
     output: {
@@ -24,7 +24,7 @@ module.exports = {
 
         // pack common vender files
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor', 
+            name: 'vendor',
             minChunks: Infinity
         }),
 
